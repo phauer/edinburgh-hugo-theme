@@ -1,0 +1,15 @@
+<article class="eb-entry eb-entry-list">
+    <header>
+        <h1><a href="{{ .Permalink }}" rel="bookmark">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a> </h1>
+        <p>Posted on {{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+    </header>
+    <section class="eb-entry-content">
+        <a href="{{ .Permalink }}" rel="bookmark">
+            {{ with .Params.featuredImage }}
+            <img src="{{ . }}" class="eb-thumbnail">
+            {{ end }}
+        </a>
+        {{ .Summary }}
+    </section>
+    <footer class="eb-entry-meta"></footer>
+</article>

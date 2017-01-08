@@ -1,0 +1,104 @@
+{{ partial "header.html" . }}
+<body>
+
+<div class="container">
+    {{ partial "title-navi.html" . }}
+
+    <main class="row eb-content">
+        <article class="eb-entry eb-entry-page">
+            <header>
+                <h1>{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</h1>
+                <p>Posted on {{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+            </header>
+            <section class="eb-entry-content">
+                {{ partial "toc.html" . }}
+                {{ .Content }}
+            </section>
+            <footer class="eb-entry-meta">
+                <p>
+                This entry was posted in
+                    {{ range .Params.categories }}
+                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>,
+                    {{ end }}
+
+                    and tagged with
+                    {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>,
+                    {{ end }}
+                </p>
+            </footer>
+        </article>
+    </main>
+
+    {{ partial "footer.html" . }}
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{{ partial "header.html" . }}-->
+<!--<body>-->
+
+  <!--{{ partial "title-navi.html" . }}-->
+
+  <!--<div class="content container">-->
+    <!--<div class="post">-->
+    <!--<h1 class="post-title">{{ .Title }}</h1>-->
+    <!--<span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>-->
+    <!--{{if .Params.series}}-->
+	    <!--{{ $name := index .Params.series 0 }}-->
+    	<!--<p class="seriesname">Series: <a href="{{.Site.BaseUrl}}/series/{{$name | urlize}}">{{$name}}</a></p>-->
+    <!--{{end}}-->
+    <!--{{ .Content }}-->
+    <!---->
+
+    <!--{{ if .Params.series }}-->
+        <!--{{ $link := .Permalink }}-->
+	    <!--{{ $name := index .Params.series 0 }}-->
+	    <!--<hr/>-->
+    	<!--<p><a href="" id="series"></a>This is a post in the <b>{{$name}}</b> series.<br/>-->
+    	<!--Other posts in this series:</p>-->
+        <!--{{ $name := $name | urlize }}-->
+        <!--{{ $series := index .Site.Taxonomies.series $name }}-->
+        <!--<ul class="series">-->
+        <!--{{ range $series.Pages }}-->
+            <!--<li>{{.Date.Format "Jan 02, 2006"}} - -->
+            <!--{{ if eq .Permalink $link }}-->
+                <!--{{.LinkTitle}}-->
+            <!--{{else}}-->
+                <!--<a href="{{.Permalink}}">{{.LinkTitle}} </a>-->
+            <!--{{end}}-->
+            <!--</li>-->
+        <!--{{end}}-->
+        <!--</ul>-->
+	<!--{{end}} -->
+	<!---->
+    <!--{{ partial "comments.html" . }}-->
+
+        <!--{{ partial "footer.html" . }}-->
+<!--</div>-->
+<!--</div> -->
+
+<!--</body>-->
+<!--</html>-->

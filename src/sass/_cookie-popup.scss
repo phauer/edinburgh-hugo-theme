@@ -1,0 +1,21 @@
+@import "common";
+
+div.cc_banner-wrapper {
+  a.cc_btn_accept_all {
+    background-color: $eb-blue;
+    color: white;
+    &:hover {
+      background-color: rgba($eb-blue, 0.65);
+      color: white;
+    }
+  }
+  a.cc_more_info {
+    color: $eb-blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p.cc_message{
+    color: $eb-black;
+  }
+}

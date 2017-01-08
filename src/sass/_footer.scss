@@ -1,0 +1,72 @@
+@import "common";
+
+nav.eb-navigation {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  h1.eb-screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+  }
+  a {
+    display: block;
+  }
+  span.eb-small-icon {
+    font-size: 80%;
+  }
+}
+nav.eb-navigation-paging {
+  font-weight: bold;
+}
+
+aside#eb-about {
+  @extend .eb-border-top;
+  @extend .eb-border-bottom;
+  padding: 25px 10px 20px 10px;
+  margin-top: 20px;
+  img {
+    @extend .avatar;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+aside.eb-latest-area {
+  @extend .eb-text-format;
+  ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+  a {
+    &.eb-post-link {
+      display: block;
+    }
+    &.eb-other-link { //tags, categories
+      text-transform: capitalize;
+    }
+    &:hover{
+      background-color: $eb-gray-lighter;
+    }
+  }
+}
+
+footer.eb-footer {
+  .eb-imprint {
+    @extend .eb-border-top;
+    padding: 19px 0 0 17px;
+    color: #777;
+    line-height: 8px;
+    font-size: $eb-small-text-size;
+  }
+}
+

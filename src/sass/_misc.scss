@@ -1,0 +1,14 @@
+@import "common";
+
+/* override bootstrap's default */
+pre {
+  background-color: #fff;
+  border: 1px solid $eb-gray-light;
+  word-break: keep-all;
+}
+code{
+  font-family: monospace;
+  color: $eb-black;
+  background: #eeeeee;
+}
+

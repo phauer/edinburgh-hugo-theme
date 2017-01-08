@@ -1,0 +1,62 @@
+{{ partial "about.html" . }}
+
+<div class="eb-comments-area">
+  TODO comments
+</div>
+
+<nav role="navigation" class="eb-navigation">
+  <h1 class="eb-screen-reader-text">Post Navigation</h1>
+  {{ if .PrevInSection }}
+  <a href="{{.PrevInSection.Permalink}}" rel="prev">
+    <span class="glyphicon glyphicon-menu-left eb-small-icon" aria-hidden="true"></span> {{.PrevInSection.Title}}
+  </a>
+  {{ end }}
+  {{ if .NextInSection }}
+  <a href="{{.NextInSection.Permalink}}" rel="next">
+    {{.NextInSection.Title}} <span class="glyphicon glyphicon-menu-right eb-small-icon" aria-hidden="true"></span>
+  </a>
+  {{ end }}
+</nav>
+
+<div class="row">
+  <aside class="col-md-4 eb-latest-area">
+    <h3>Recent Posts</h3>
+    <ul>
+      {{ range first 15 .Site.Pages }}
+      {{if eq .Type "post" }}
+      <li>{{ .Render "link" }}</li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </aside>
+
+  <aside class="col-md-4 eb-latest-area">
+    <h3>Categories</h3>
+    <ul>
+      {{ range first 999 .Site.Taxonomies.categories.ByCount }}
+      <li><a href="/categories/{{ .Name | urlize }}"  class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+      {{ end }}
+    </ul>
+  </aside>
+
+  <aside class="col-md-4 eb-latest-area">
+    <h3>Tags</h3>
+    <ul>
+      {{ range first 999 .Site.Taxonomies.tags.ByCount }}
+      <li><a href="/tags/{{ .Name | urlize }}" class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+      {{ end }}
+    </ul>
+  </aside>
+
+</div>
+
+<footer class="eb-footer">
+  <div class="row eb-imprint">
+    <p><a href="/page/legal/">Imprint, Contribution, Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script src="/js/mergedScripts.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+{{ partial "cookie-consent.html" . }}

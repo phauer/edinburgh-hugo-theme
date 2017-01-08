@@ -1,0 +1,107 @@
+@import "common";
+
+main.eb-content {
+  margin: 0 0;
+  article.eb-entry-list {
+    @media (min-width: $eb-small-max-width) {
+      p {
+        //create more "negative space". empty/white space is nobel and pixels cost nothing.
+        margin-left: 230px;
+      }
+    }
+  }
+  article.eb-entry {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    header {
+      h1 {
+        clear: both;
+      }
+      h1 + p {
+        text-transform : uppercase;
+        letter-spacing: 0.09rem;
+        text-align: right;
+        line-height: 10px;
+        font-size: $eb-small-text-size;
+        color: $eb-gray;
+      }
+    }
+    .eb-entry-content {
+      p, li {
+        text-align: justify;
+        @extend .eb-text-format;
+      }
+      h1 {
+        margin-top: 60px;
+      }
+      h2 {
+        margin-top: 35px;
+      }
+      img.eb-thumbnail {
+        margin: 10px;
+        float: left;
+        max-width: 200px;
+      }
+      .alignleft {
+        display: inline; float: left; margin-right: 1.5em;
+      }
+      .alignright {
+        display: inline; float: right; margin-left: 1.5em;
+      }
+      .aligncenter {
+        display: block; margin: 0 auto;
+      }
+      img {
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+      }
+      img[class*="wp-image-"] {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      //copied from inline css in header (img.wp-smiley, img.emoji)
+      img[src*="emoji"] {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+      img.eb-thumbnail.wp-post-image[src$=".svg"] {
+        width: 200px;
+      }
+      .wp-caption {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0 10px;
+        &.aligncenter {
+          margin-bottom: 10px;
+        }
+        img[class*="wp-image-"] {
+          display: block;
+        }
+        .wp-caption-text {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+    }
+    footer {
+      clear: both;
+      &.eb-entry-meta {
+        font-size: $eb-small-text-size;
+        padding-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<aside id="eb-about">
+    <img alt="{{ .Site.Params.author.name }}" src="{{ .Site.Params.author.image }}" class="avatar avatar-100 photo" height="100" width="100">
+    <h3>{{ .Site.Params.author.name }}</h3>
+    <p>{{ .Site.Params.author.about | markdownify }}</p>
+    <p>
+        {{ with .Site.Params.social.mail }}
+        <a href="mailto:{{.}}"><i class="fa fa-lg fa-envelope-o"></i></a>&nbsp;&nbsp;
+        {{end}}
+
+        {{ with .Site.Params.social.github }}
+        <a href="{{.}}"><i class="fa fa-lg fa-github-square"></i></a>&nbsp;&nbsp;
+        {{end}}
+
+        {{ with .Site.Params.social.linkedin }}
+        <a href="{{.}}"><i class="fa fa-lg fa-linkedin-square"></i></a>&nbsp;&nbsp;
+        {{end}}
+
+        {{ with .Site.Params.social.xing }}
+        <a href="{{.}}"><i class="fa fa-lg fa-xing-square"></i></a>&nbsp;&nbsp;
+        {{end}}
+    </p>
+</aside>

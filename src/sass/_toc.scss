@@ -1,0 +1,25 @@
+main.eb-content {
+  article.eb-entry {
+    nav#TableOfContents{
+      border: 1px solid #aaa;
+      width: 350px;
+      float: right;
+      margin-left: 10px;
+      font-size: 95%;
+      padding: 10px;
+      li {
+        text-align: left;
+      }
+      ul {
+        padding-left: 0px;
+        list-style: none;
+        ul {
+          padding-left: 15px;
+          ul {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}

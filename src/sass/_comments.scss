@@ -1,0 +1,36 @@
+.eb-comments-area {
+  font-size: $eb-small-text-size;
+  ul {
+    list-style: none;
+    &.children {
+      margin-left: 25px;
+    }
+  }
+  li.comment {
+    div.comment-content {
+      text-align: justify;
+    }
+    div.eb-comment-test-area {
+      @extend .eb-border-bottom;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  li.pingback {
+    div.comment-body {
+      margin-bottom: 30px;
+      width: 100%;
+      display: table;
+      p.pingback-header {
+        width: 60px;
+        display: table-cell;
+        font-style: italic;
+      }
+      div.pingback-body {
+        @extend .eb-border-bottom;
+        display: table-cell;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "common";
+
+header.eb-header {
+  padding: 20px 0 0 0;
+  margin-bottom: 15px;
+  div.eb-title-column {
+    background: url("../img/philipphauer-logo.png") no-repeat 22px center;
+  }
+  h1.eb-title, p.eb-subtitle{
+    @media (min-width: $eb-small-max-width) {
+      white-space:nowrap;
+    }
+  }
+  h1.eb-title {
+    margin: 5px 0 0 40px;
+    line-height: 40px;
+    font-size: 40px;
+  }
+  p.eb-subtitle {
+    margin: 2px 0 5px 40px;
+    color: $eb-gray;
+    font-size: 14px;
+  }
+  nav.eb-navbar-default {
+    background-color: transparent;
+    border: none;
+    .navbar-collapse.in,
+    .navbar-collapse.collapsing {
+      border: 1px solid #ddd;
+    }
+    .eb-active {
+      font-style: italic;
+      background-color: #fff;
+    }
+    li {
+      &:hover {
+        background-color: $eb-gray-lighter;
+      }
+    }
+    li a {
+      color: $eb-gray !important;
+    }
+    ul.eb-search-dropdown-menu {
+      width: 275px;
+    }
+  }
+}

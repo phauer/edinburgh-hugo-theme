@@ -1,0 +1,99 @@
+@import "common";
+
+@mixin imgWidth($width) {
+  img.w#{$width}{
+    width: #{$width}px;
+    +br+em {
+      width: #{$width - 25}px;
+      margin: 0 auto;
+    }
+  }
+  a.w#{$width} {
+    img {
+      width: #{$width}px;
+    }
+    +br+em {
+      width: #{$width - 25}px;
+      margin: 0 auto;
+    }
+  }
+}
+/* markdown classes. pattern to use captions with markdown extra:
+![alt text](https://blog.philipphauer.de/wp-content/uploads/2016/11/Kotlin-logo.png "title"){.w400}
+*caption*
+*/
+.imageCaption {
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-style: normal;
+}
+
+main.eb-content {
+  article.eb-entry {
+    .eb-entry-content {
+      //center by default
+      img {
+        display:block;
+        margin: 30px auto 10px;
+        +br {
+          display:none;
+        }
+        +br+em {
+          @extend .imageCaption;
+        }
+        &.left {
+          float: left;
+          margin: 0 5px 0 5px;
+        }
+        &.right {
+          float: right;
+          margin: 0 5px 0 5px;
+        }
+      }
+      //if img is linked (nesting in <a>)
+      //problem: I can't select all <a> that contains an <img>. Let's hope that the a+br+em sequence only occurs for image captions.
+      a {
+        +br {
+          display:none;
+        }
+        +br+em {
+          @extend .imageCaption;
+        }
+      }
+      @include imgWidth(100);
+      @include imgWidth(150);
+      @include imgWidth(200);
+      @include imgWidth(250);
+      @include imgWidth(300);
+      @include imgWidth(350);
+      @include imgWidth(400);
+      @include imgWidth(450);
+      @include imgWidth(500);
+      @include imgWidth(550);
+      @include imgWidth(600);
+      @include imgWidth(650);
+
+      table {
+        th, td {
+          padding: 8px;
+        }
+        tbody tr:hover {
+          background-color: #f5f5f5;
+          code {
+            background-color: #f5f5f5;
+          }
+        }
+        th {
+          border-top: none;
+        }
+        td {
+          text-align: left;
+          vertical-align: top;
+          border-top: 1px solid #dddddd;
+        }
+      }
+    }
+  }
+}

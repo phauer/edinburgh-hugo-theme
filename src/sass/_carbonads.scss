@@ -1,0 +1,44 @@
+@import "common";
+.eb-carbonads{
+  height: 126px;
+  #carbonads {
+    @media (max-width: $eb-xsmall-max-width) {
+      width: 100%;
+    }
+    @media (min-width: $eb-xsmall-max-width) {
+      width: 350px;
+    }
+    margin: 0 auto;
+    font-size: 13px;
+    display: block;
+    overflow: hidden;
+    padding: 1em;
+    font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.5;
+    span {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    .carbon-img {
+      float: left;
+      margin-right: 1em;
+      img {
+        display: block;
+      }
+    }
+    .carbon-text {
+      display: block;
+      float: left;
+      max-width: calc(100% - 130px - 1em);
+      text-align: left;
+    }
+    .carbon-poweredby {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      font-size: .8em;
+    }
+  }
+}

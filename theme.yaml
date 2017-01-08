@@ -1,0 +1,7 @@
+name: "edinburgh-hugo-theme"
+description: "Edinburgh Hugo Theme"
+homepage: "https://github.com/phauer/edinburgh-hugo-theme"
+min_version: 0.18
+author:
+  name: "Philipp Hauer"
+  homepage: "https://blog.philipphauer.de"

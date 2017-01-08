@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+<body>
+
+<div class="container">
+  {{ partial "title-navi.html" . }}
+
+  <main class="row eb-content">
+    <article class="eb-entry eb-entry-page">
+      <header>
+        <h1>{{ .Title }}</h1>
+      </header>
+      <section class="eb-entry-content">
+        {{ .Content }}
+      </section>
+    </article>
+  </main>
+
+  {{ partial "footer.html" . }}
+</div>
+
+</body>
+</html>

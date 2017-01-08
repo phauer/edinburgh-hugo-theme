@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<body>
+
+<div class="container">
+  {{ partial "title-navi.html" . }}
+
+  <main class="row eb-content">
+    {{ range first 999 .Data.Pages }}
+      {{ if eq .Type "post" }}
+        {{ .Render "summary" }}
+      {{ end }}
+    {{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+</div>
+
+</body>
+</html>

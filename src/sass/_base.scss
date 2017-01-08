@@ -1,0 +1,39 @@
+@import "common";
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: $eb-content-text-size;
+  color: $eb-black;
+}
+
+div.container {
+  max-width: 81rem; //long lines are hard to read
+}
+
+a {
+  color: $eb-blue;
+  &:hover {
+    color: $eb-blue-dark;
+  }
+  code {
+    color: $eb-blue;
+    &:hover {
+      color: $eb-blue-dark;
+    }
+  }
+}
+.eb-text-format {
+  letter-spacing: 0.03rem; // justify needs more space between letters. otherwise there are to big gaps between the words
+  line-height: 1.5; // not to much line-height. the text need to be like a gray surface. a texture.
+}
+/* the following classes are supposed to be extended by other classes */
+.eb-border-top {
+  border-top: 1px solid $eb-gray-light;
+}
+.eb-border-bottom {
+  border-bottom: 1px solid $eb-gray-light;
+}
+.avatar {
+  border-radius: 150px;
+}
