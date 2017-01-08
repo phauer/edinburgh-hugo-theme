@@ -1,6 +1,6 @@
-# Edinburgh Hugo Theme
+# Edinburgh Hugo Theme (draft)
 
-This is the theme for my blog. It's the migration of my [edinburgh-wordpress-theme](https://github.com/phauer/edinburgh-wordpress-theme) to the static website engine [Hugo](https://gohugo.io/).
+This is the upcoming theme for my blog. It's the migration of my [edinburgh-wordpress-theme](https://github.com/phauer/edinburgh-wordpress-theme) to the static website engine [Hugo](https://gohugo.io/).
 
 # Usage
 
