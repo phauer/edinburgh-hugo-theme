@@ -12,7 +12,7 @@ TODO
   - Source: `src`
   - Target: `static`
 - Hugo generates the static HTML pages based on the Markdown and Theme files.
-  - Source: `theme (layout, static), content`
+  - Source: `<theme>/layout, <theme>/static, content`
   - Target: `public`
 
 ## Development Workflow
@@ -27,10 +27,10 @@ cd ../.. # in root folder
 hugo server 
 ```
 
-## Setting up gulp
+## Setting up Gulp
 
 ```bash
-cd cd themes/edinburgh-hugo-theme
+cd themes/edinburgh-hugo-theme
 npm install
 ```
 
@@ -39,6 +39,7 @@ npm install
 ```bash
 cd themes/edinburgh-hugo-theme
 gulp create # create assets.
+
 cd ../..
 hugo # create website
 ```

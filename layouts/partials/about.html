@@ -1,6 +1,6 @@
 <aside id="eb-about">
     <img alt="{{ .Site.Params.author.name }}" src="{{ .Site.Params.author.image }}" class="avatar avatar-100 photo" height="100" width="100">
-    <h3>{{ .Site.Params.author.name }}</h3>
+    <p class="eb-about-name">{{ .Site.Params.author.name }}</p>
     <p>{{ .Site.Params.author.about | markdownify }}</p>
     <p>
         {{ with .Site.Params.social.mail }}

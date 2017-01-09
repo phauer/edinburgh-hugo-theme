@@ -37,3 +37,10 @@ a {
 .avatar {
   border-radius: 150px;
 }
+/* format like h3, but without using h3. Keep the document outline clean. only use h1-h3 for content. -> SEO */
+.h3-like{
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 26.4px;
+}

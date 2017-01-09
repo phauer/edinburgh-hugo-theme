@@ -6,12 +6,12 @@ header.eb-header {
   div.eb-title-column {
     background: url("../img/philipphauer-logo.png") no-repeat 22px center;
   }
-  h1.eb-title, p.eb-subtitle{
+  .eb-title, p.eb-subtitle{
     @media (min-width: $eb-small-max-width) {
       white-space:nowrap;
     }
   }
-  h1.eb-title {
+  .eb-title {
     margin: 5px 0 0 40px;
     line-height: 40px;
     font-size: 40px;
