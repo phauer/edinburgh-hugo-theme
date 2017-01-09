@@ -2,6 +2,9 @@
 
 main.eb-content {
   margin: 0 0;
+  h1.eb-taxonomy-title{
+    margin-bottom: 40px;
+  }
   article.eb-entry-list {
     @media (min-width: $eb-small-max-width) {
       p {
