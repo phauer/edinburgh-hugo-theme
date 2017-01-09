@@ -1,0 +1,9 @@
+{
+  "name": "edinburgh-hugo-theme",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "boostrap#^3.3.7",
+    "highlightjs": "^9.9.0",
+    "font-awesome": "^4.7.0"
+  }
+}

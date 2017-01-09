@@ -10,6 +10,7 @@ var gulp = require('gulp'),
   merge = require('merge-stream');
 
 var sourceFolder = 'src/';
+var bowerFolder = 'bower_components/';
 var targetFolder = 'static/';
 var cssTargetFolder = targetFolder + 'css/';
 
@@ -33,8 +34,8 @@ gulp.task('createCss', function () {
     .pipe(cleanCSS());
 
   var additionalCssFiles = gulp.src([
-    sourceFolder + 'deps/bootstrap/css/bootstrap.min.css',
-    sourceFolder + 'deps/font-awesome-4.7.0/css/font-awesome.min.css'
+      bowerFolder + 'bootstrap/dist/css/bootstrap.min.css',
+      bowerFolder + 'font-awesome/css/font-awesome.min.css'
   ]);
 
   //bootstrap needs to be before edinburgh, because edinburgh overrides bootstrap's styles.
@@ -51,9 +52,9 @@ gulp.task('clean', function () {
 
 gulp.task('concatJs', function () {
   return gulp.src([
-    sourceFolder + 'deps/jquery-3.1.0.min.js', //first jquery, then bootstrap
-    sourceFolder + 'deps/bootstrap/js/bootstrap.js',
-    sourceFolder + 'deps/highlightjs/highlight.pack.js'
+      bowerFolder + 'jquery/dist/jquery.min.js', //first jquery, then bootstrap
+      bowerFolder + 'bootstrap/dist/js/bootstrap.js',
+      bowerFolder + 'highlightjs/highlight.pack.min.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
     .pipe(gulp.dest(targetFolder + "js"));
@@ -61,8 +62,8 @@ gulp.task('concatJs', function () {
 
 gulp.task('copyFonts', function () {
   return gulp.src([
-    sourceFolder + 'deps/bootstrap/fonts/*',
-    sourceFolder + 'deps/font-awesome-4.7.0/fonts/*'
+      bowerFolder + 'bootstrap/dist/fonts/*',
+      bowerFolder + 'font-awesome/fonts/*'
   ])
     .pipe(gulp.dest(targetFolder + "/fonts"));
 });

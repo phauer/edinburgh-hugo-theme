@@ -8,6 +8,13 @@ TODO
 
 # Development
 
+Preparation:
+```bash
+npm install
+bower install # install dependencies like boostrap, jquery, highlightjs, font awesome
+```
+
+- Bower installs the dependencies
 - Gulp copies and preprocesses the assets (compile sass, concat css and js, copy images and fonts). 
   - Source: `src`
   - Target: `static`
