@@ -7,12 +7,12 @@
 <nav role="navigation" class="eb-navigation">
   <p class="eb-screen-reader-text">Post Navigation</p>
   {{ if .PrevInSection }}
-  <a href="{{.PrevInSection.Permalink}}" rel="prev">
+  <a href="{{.PrevInSection.Permalink}}">
     <span class="glyphicon glyphicon-menu-left eb-small-icon" aria-hidden="true"></span> {{.PrevInSection.Title}}
   </a>
   {{ end }}
   {{ if .NextInSection }}
-  <a href="{{.NextInSection.Permalink}}" rel="next">
+  <a href="{{.NextInSection.Permalink}}">
     {{.NextInSection.Title}} <span class="glyphicon glyphicon-menu-right eb-small-icon" aria-hidden="true"></span>
   </a>
   {{ end }}
