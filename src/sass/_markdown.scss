@@ -1,65 +1,37 @@
 @import "common";
 
 @mixin imgWidth($width) {
-  img.w#{$width}{
+  figure.w#{$width}{
     width: #{$width}px;
-    +br+em {
+    figcaption p {
       width: #{$width - 25}px;
-      margin: 0 auto;
     }
   }
-  a.w#{$width} {
-    img {
-      width: #{$width}px;
-    }
-    +br+em {
-      width: #{$width - 25}px;
-      margin: 0 auto;
-    }
-  }
-}
-/* markdown classes. pattern to use captions with markdown extra:
-![alt text](/wp-content/uploads/2016/11/Kotlin-logo.png "title"){.w400}
-*caption*
-*/
-.imageCaption {
-  text-align: center;
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  font-style: normal;
 }
 
 main.eb-content {
   article.eb-entry {
     .eb-entry-content {
-      //center by default
+      //style for plain Markdown image syntax
       img {
-        display:block;
+        display: block;
         margin: 30px auto 10px;
-        +br {
-          display:none;
+      }
+      //style for Hugo's shortcode "figure"
+      figure{
+        //center image by default
+        margin: 30px auto 10px;
+        figcaption p {
+          text-align: center;
+          margin: 5px 0 20px 0;
         }
-        +br+em {
-          @extend .imageCaption;
-        }
-        &.left {
+        &.left img {
           float: left;
           margin: 0 5px 0 5px;
         }
-        &.right {
+        &.right img {
           float: right;
           margin: 0 5px 0 5px;
-        }
-      }
-      //if img is linked (nesting in <a>)
-      //problem: I can't select all <a> that contains an <img>. Let's hope that the a+br+em sequence only occurs for image captions.
-      a {
-        +br {
-          display:none;
-        }
-        +br+em {
-          @extend .imageCaption;
         }
       }
       @include imgWidth(100);
