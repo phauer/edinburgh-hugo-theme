@@ -18,12 +18,12 @@
                 <p>
                 This entry was posted in
                     {{ range .Params.categories }}
-                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>,
+                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/" rel="category tag">{{ . }}</a>,
                     {{ end }}
 
                     and tagged with
                     {{ range .Params.tags }}
-                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>,
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a>,
                     {{ end }}
                 </p>
             </footer>

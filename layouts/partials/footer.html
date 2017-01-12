@@ -34,7 +34,7 @@
     <p class="eb-latest-title">Categories</p>
     <ul>
       {{ range first 999 .Site.Taxonomies.categories.ByCount }}
-      <li><a href="/categories/{{ .Name | urlize }}"  class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+      <li><a href="/categories/{{ .Name | urlize }}/"  class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
       {{ end }}
     </ul>
   </aside>
@@ -43,7 +43,7 @@
     <p class="eb-latest-title">Tags</p>
     <ul>
       {{ range first 999 .Site.Taxonomies.tags.ByCount }}
-      <li><a href="/tags/{{ .Name | urlize }}" class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+      <li><a href="/tags/{{ .Name | urlize }}/" class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
       {{ end }}
     </ul>
   </aside>
