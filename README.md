@@ -8,10 +8,12 @@ TODO
 
 # Development
 
+Install at least Hugo 0.18.1.
+
 Preparation:
 ```bash
 npm install
-bower install # install dependencies like boostrap, jquery, highlightjs, font awesome
+node_modules/bower/bin/bower install # install dependencies like boostrap, jquery, highlightjs, font awesome
 ```
 
 - Bower installs the dependencies
