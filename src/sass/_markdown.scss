@@ -2,9 +2,9 @@
 
 @mixin imgWidth($width) {
   figure.w#{$width}{
-    width: #{$width}px;
+    max-width: #{$width}px;
     figcaption p {
-      width: #{$width - 25}px;
+      max-width: #{$width - 25}px;
     }
   }
 }
