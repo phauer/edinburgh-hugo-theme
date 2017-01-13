@@ -3,9 +3,6 @@
 @mixin imgWidth($width) {
   figure.w#{$width}{
     max-width: #{$width}px;
-    figcaption p {
-      max-width: #{$width - 25}px;
-    }
   }
 }
 
@@ -23,7 +20,7 @@ main.eb-content {
         margin: 30px auto 10px;
         figcaption p {
           text-align: center;
-          margin: 5px 0 20px 0;
+          margin: 5px 5px 20px 5px;
         }
         &.left img {
           float: left;
