@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+  {{ partial "header-shared.html" . }}
+  <title>{{ .Title }} - {{ .Site.Params.description }}</title>
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.description }}" />
+  <link rel="canonical" href="{{ .Paginator.URL | absURL  }}"/>
+  <meta property="og:url" content="{{ .Paginator.URL | absURL  }}" />
+  <meta property="og:type" content="website" />
+  <meta name="description" content="{{ .Site.Params.description }}"/>
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  {{ if .Paginator.HasPrev }}
+    {{ if eq .Paginator.PageNumber 2 }}
+    <link rel="prev" href="{{ .Site.BaseURL }}" />
+    {{ else }}
+    <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
+    {{ end }}
+  {{ end }}
+  {{ if .Paginator.HasNext }}
+    <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
+  {{ end }}
+</head>

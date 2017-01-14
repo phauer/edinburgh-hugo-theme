@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+  {{ partial "header-shared.html" . }}
+  <title>{{ .Title }}</title>
+  <meta property="og:title" content="{{ .Title }}" />
+  <link rel="canonical" href="{{ .Permalink }}"/>
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:type" content="object" />
+</head>
