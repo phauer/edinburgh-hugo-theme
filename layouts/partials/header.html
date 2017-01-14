@@ -5,9 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <meta name="description" content="{{ .Site.Params.description }}"/>
   <meta name="robots" content="noodp"/>
   {{ .Hugo.Generator }}
-  <link rel="canonical" href="https://blog.philipphauer.de/" />
+  {{ if .IsPage}}
+    <link rel="canonical" href="{{ .Permalink }}"/>
+  {{ else }}
+    <link rel="canonical" href="{{ .Paginator.URL | absURL  }}"/>
+  {{ end }}
   <link href="/css/mergedStyles.min.css" rel="stylesheet">
+  {{ if .Paginator.HasPrev }}
+    {{ if eq .Paginator.PageNumber 2 }}
+    <link rel="prev" href="{{ .Site.BaseURL }}" />
+    {{ else }}
+    <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
+    {{ end }}
+  {{ end }}
+  {{ if .Paginator.HasNext }}
+    <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
+  {{ end }}
 </head>
