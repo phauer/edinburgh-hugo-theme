@@ -22,7 +22,7 @@
   <aside class="col-md-4 eb-latest-area">
     <p class="eb-latest-title">Recent Posts</p>
     <ul>
-      {{ range first 15 .Site.Pages }}
+      {{ range first 5 .Site.Pages }}
       {{if eq .Type "post" }}
       <li>{{ .Render "link" }}</li>
       {{ end }}
@@ -40,9 +40,9 @@
   </aside>
 
   <aside class="col-md-4 eb-latest-area">
-    <p class="eb-latest-title">Tags</p>
+    <p class="eb-latest-title">Top Tags</p>
     <ul>
-      {{ range first 999 .Site.Taxonomies.tags.ByCount }}
+      {{ range first 12 .Site.Taxonomies.tags.ByCount }}
       <li><a href="/tags/{{ .Name | urlize }}/" class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
       {{ end }}
     </ul>
