@@ -31,6 +31,11 @@
         </article>
     </main>
 
+    <aside class="eb-comments-area">
+        <p class="h3-like">Comments</p>
+        {{ template "_internal/disqus.html" . }}
+    </aside>
+
     {{ partial "footer.html" . }}
 </div>
 

@@ -102,6 +102,7 @@ main.eb-content {
     }
     footer {
       clear: both;
+      padding: 10px 0 30px 0;
       &.eb-entry-meta {
         padding-top: 10px;
         @extend .eb-border-top;

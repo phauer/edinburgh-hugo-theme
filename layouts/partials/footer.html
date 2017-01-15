@@ -1,9 +1,5 @@
 {{ partial "about.html" . }}
 
-<div class="eb-comments-area">
-  TODO comments
-</div>
-
 <nav role="navigation" class="eb-navigation">
   <p class="eb-screen-reader-text">Post Navigation</p>
   {{ if .PrevInSection }}
@@ -18,7 +14,7 @@
   {{ end }}
 </nav>
 
-<div class="row">
+<aside class="row">
   <aside class="col-md-4 eb-latest-area">
     <p class="eb-latest-title">Recent Posts</p>
     <ul>
@@ -47,8 +43,7 @@
       {{ end }}
     </ul>
   </aside>
-
-</div>
+</aside>
 
 <footer class="eb-footer">
   <div class="row eb-imprint">
