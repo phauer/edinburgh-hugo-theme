@@ -4,7 +4,8 @@
     <p>{{ .Site.Params.author.about | markdownify }}</p>
     <p>
         {{ with .Site.Params.social.mail }}
-        <a href="mailto:{{.}}"><i class="fa fa-lg fa-envelope-o"></i></a>&nbsp;&nbsp;
+        <a href="mailto:{{.}}" onmouseover="this.href=this.href.replace(/x/g,'');">
+            <i class="fa fa-lg fa-envelope-o"></i></a>&nbsp;&nbsp;
         {{end}}
 
         {{ with .Site.Params.social.github }}
