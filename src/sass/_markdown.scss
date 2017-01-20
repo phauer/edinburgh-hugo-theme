@@ -7,8 +7,8 @@
 }
 
 main.eb-content {
-  article.eb-entry {
-    .eb-entry-content {
+  article.eb-entry-single {
+    section {
       //style for plain Markdown image syntax
       img {
         display: block;
@@ -18,6 +18,9 @@ main.eb-content {
       figure{
         //center image by default
         margin: 30px auto 10px;
+        img {
+          max-width: 100%;
+        }
         figcaption p {
           text-align: center;
           margin: 5px 5px 20px 5px;

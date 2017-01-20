@@ -5,12 +5,12 @@
     {{ partial "title-navi.html" . }}
 
     <main class="row eb-content">
-        <article class="eb-entry eb-entry-page">
+        <article class="eb-entry-single">
             <header>
                 <h1>{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</h1>
                 <p>Posted on {{ .Date.Format "Mon, Jan 2, 2006" }}</p>
             </header>
-            <section class="eb-entry-content">
+            <section>
                 {{ partial "toc.html" . }}
                 {{ .Content }}
             </section>

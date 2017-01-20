@@ -5,19 +5,7 @@ main.eb-content {
   h1.eb-taxonomy-title{
     margin-bottom: 40px;
   }
-  article.eb-entry-list {
-    @media (min-width: $eb-small-max-width) {
-      p {
-        //create more "negative space". empty/white space is nobel and pixels cost nothing.
-        margin-left: 230px;
-      }
-    }
-  }
-  article.eb-entry {
-    margin-bottom: 30px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+  article {
     header {
       h1 {
         clear: both;
@@ -31,26 +19,47 @@ main.eb-content {
         color: $eb-gray;
       }
     }
-    section.eb-entry-content {
-      margin-bottom: 80px;
+    section {
       p, li {
         text-align: justify;
         @extend .eb-text-format;
       }
+    }
+    footer {
+      clear: both;
+    }
+  }
+  article.eb-entry-summary {
+    @media (min-width: $eb-small-max-width) {
+      p {
+        //create more "negative space". empty/white space is nobel and pixels cost nothing.
+        margin-left: 230px;
+      }
+    }
+    img.eb-thumbnail {
+      margin: 10px;
+      float: left;
+      max-width: 200px;
+    }
+    footer{
+      height: 40px;
+    }
+  }
+  article.eb-entry-single {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    section {
+      margin-bottom: 80px;
       h1 {
         margin-top: 60px;
       }
       h2 {
         margin-top: 35px;
       }
-      img.eb-thumbnail {
-        margin: 10px;
-        float: left;
-        max-width: 200px;
-      }
     }
     footer {
-      clear: both;
       padding: 10px 0 30px 0;
       &.eb-entry-meta {
         padding-top: 10px;
