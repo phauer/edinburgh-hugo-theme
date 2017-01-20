@@ -8,7 +8,7 @@
         <article class="eb-entry-single">
             <header>
                 <h1>{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</h1>
-                <p>Posted on {{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+                <p>Posted on {{ .Date.Format "Jan 2, 2006" }}</p>
             </header>
             <section>
                 {{ partial "toc.html" . }}
