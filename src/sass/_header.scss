@@ -21,27 +21,24 @@ header.eb-header {
     color: $eb-gray;
     font-size: 14px;
   }
-  nav.eb-navbar-default {
-    background-color: transparent;
-    border: none;
-    .navbar-collapse.in,
-    .navbar-collapse.collapsing {
-      border: 1px solid #ddd;
-    }
-    .eb-active {
-      font-style: italic;
-      background-color: #fff;
-    }
-    li {
-      &:hover {
-        background-color: $eb-gray-lighter;
+  div.eb-search {
+    text-align: right;
+    button {
+      color: $eb-gray;
+      &.eb-dropdown-search{
+        margin: 5px 0 0 0;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover, &:active, &[aria-expanded="true"] {
+          background-color: $eb-gray-lighter;
+        }
       }
     }
-    li a {
-      color: $eb-gray !important;
-    }
-    ul.eb-search-dropdown-menu {
-      width: 275px;
+    div.eb-search-form{
+      width: 270px;
     }
   }
 }
