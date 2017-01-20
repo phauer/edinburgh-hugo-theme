@@ -9,14 +9,14 @@
   <meta property="og:type" content="website" />
   <meta name="description" content="{{ .Site.Params.description }}"/>
   <meta property="og:description" content="{{ .Site.Params.description }}" />
-  {{ if .Paginator.HasPrev }}
-    {{ if eq .Paginator.PageNumber 2 }}
+  {{ if .Paginator.HasPrev -}}
+    {{ if eq .Paginator.PageNumber 2 -}}
     <link rel="prev" href="{{ .Site.BaseURL }}" />
-    {{ else }}
+    {{- else -}}
     <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
-    {{ end }}
-  {{ end }}
-  {{ if .Paginator.HasNext }}
+    {{- end }}
+  {{- end }}
+  {{ if .Paginator.HasNext -}}
     <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
-  {{ end }}
+  {{- end }}
 </head>

@@ -3,21 +3,18 @@
     <p class="eb-about-name">{{ .Site.Params.author.name }}</p>
     <p>{{ .Site.Params.author.about | markdownify }}</p>
     <p>
-        {{ with .Site.Params.social.mail }}
+        {{ with .Site.Params.social.mail -}}
         <a href="mailto:{{.}}" onmouseover="this.href=this.href.replace(/x/g,'');">
             <i class="fa fa-lg fa-envelope-o"></i></a>&nbsp;&nbsp;
-        {{end}}
-
-        {{ with .Site.Params.social.github }}
+        {{- end }}
+        {{ with .Site.Params.social.github -}}
         <a href="{{.}}"><i class="fa fa-lg fa-github-square"></i></a>&nbsp;&nbsp;
-        {{end}}
-
-        {{ with .Site.Params.social.linkedin }}
+        {{- end }}
+        {{ with .Site.Params.social.linkedin -}}
         <a href="{{.}}"><i class="fa fa-lg fa-linkedin-square"></i></a>&nbsp;&nbsp;
-        {{end}}
-
-        {{ with .Site.Params.social.xing }}
+        {{- end }}
+        {{ with .Site.Params.social.xing -}}
         <a href="{{.}}"><i class="fa fa-lg fa-xing-square"></i></a>&nbsp;&nbsp;
-        {{end}}
+        {{- end }}
     </p>
 </aside>

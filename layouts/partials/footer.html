@@ -2,26 +2,26 @@
 
 <nav role="navigation" class="eb-navigation">
   <p class="eb-screen-reader-text">Post Navigation</p>
-  {{ if .PrevInSection }}
+  {{ if .PrevInSection -}}
   <a href="{{.PrevInSection.Permalink}}">
     <span class="glyphicon glyphicon-menu-left eb-small-icon" aria-hidden="true"></span> {{.PrevInSection.Title}}
   </a>
-  {{ end }}
-  {{ if .NextInSection }}
+  {{- end }}
+  {{ if .NextInSection -}}
   <a href="{{.NextInSection.Permalink}}">
     {{.NextInSection.Title}} <span class="glyphicon glyphicon-menu-right eb-small-icon" aria-hidden="true"></span>
   </a>
-  {{ end }}
+  {{- end }}
 </nav>
 
 <aside class="row">
   <aside class="col-md-4 eb-latest-area">
     <p class="eb-latest-title">Recent Posts</p>
     <ul>
-      {{ range first 5 .Site.Pages }}
-      {{if eq .Type "post" }}
+      {{ range first 5 .Site.Pages -}}
+      {{if eq .Type "post" -}}
       <li>{{ .Render "link" }}</li>
-      {{ end }}
+      {{- end }}
       {{ end }}
     </ul>
   </aside>
@@ -29,7 +29,7 @@
   <aside class="col-md-4 eb-latest-area">
     <p class="eb-latest-title">Categories</p>
     <ul>
-      {{ range .Site.Taxonomies.categories.ByCount }}
+      {{ range .Site.Taxonomies.categories.ByCount -}}
       <li><a href="/categories/{{ .Name | urlize }}/"  class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
       {{ end }}
     </ul>
@@ -38,7 +38,7 @@
   <aside class="col-md-4 eb-latest-area">
     <p class="eb-latest-title">Top Tags</p>
     <ul>
-      {{ range first 12 .Site.Taxonomies.tags.ByCount }}
+      {{ range first 12 .Site.Taxonomies.tags.ByCount -}}
       <li><a href="/tags/{{ .Name | urlize }}/" class="eb-other-link">{{ .Name | humanize }}</a> ({{ .Count }})</li>
       {{ end }}
     </ul>
