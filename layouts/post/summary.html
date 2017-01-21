@@ -5,9 +5,10 @@
     </header>
     <section>
         <a href="{{ .Permalink }}" rel="bookmark">
-            {{ with .Params.featuredImage }}
-            <img src="{{ . }}" class="eb-thumbnail">
-            {{ end }}
+            {{ $title := .Title -}}
+            {{ with .Params.featuredImage -}}
+            <img src="{{ . }}" class="eb-thumbnail" alt="{{ $title }}">
+            {{- end }}
         </a>
         {{ .Summary }}
     </section>

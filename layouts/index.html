@@ -5,14 +5,14 @@
   {{ partial "title-navi.html" . }}
 
   <main class="row eb-content">
-    {{ range .Paginator.Pages }}
-      {{ if eq .Type "post" }}
+    {{ range .Paginator.Pages -}}
+      {{ if eq .Type "post" -}}
         {{ .Render "summary" }}
-      {{ end }}
-    {{ end }}
+      {{- end }}
+    {{- end }}
   </main>
 
-  <nav role="navigation" class="eb-navigation eb-navigation-paging">
+  <nav class="eb-navigation eb-navigation-paging">
     {{ template "_internal/pagination.html" . }}
   </nav>
 
