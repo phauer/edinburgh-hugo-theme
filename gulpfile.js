@@ -53,7 +53,7 @@ gulp.task('clean', function () {
 gulp.task('concatJs', function () {
   return gulp.src([
       bowerFolder + 'jquery/dist/jquery.min.js', //first jquery, then bootstrap
-      bowerFolder + 'bootstrap/dist/js/bootstrap.js',
+      bowerFolder + 'bootstrap/dist/js/bootstrap.min.js',
       bowerFolder + 'highlightjs/highlight.pack.min.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
