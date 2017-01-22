@@ -1,10 +1,6 @@
-# Edinburgh Hugo Theme (draft)
+# Edinburgh Hugo Theme
 
-This is the upcoming theme for my blog. It's the migration of my [edinburgh-wordpress-theme](https://github.com/phauer/edinburgh-wordpress-theme) to the static website engine [Hugo](https://gohugo.io/).
-
-# Usage
-
-TODO
+This is the theme for my [blog](https://blog.philipphauer.de). It's the migration of my [edinburgh-wordpress-theme](https://github.com/phauer/edinburgh-wordpress-theme) to the static website engine [Hugo](https://gohugo.io/).
 
 # Development
 
@@ -13,7 +9,7 @@ Install at least Hugo 0.18.1.
 Preparation:
 ```bash
 npm install
-node_modules/bower/bin/bower install # install dependencies like boostrap, jquery, highlightjs, font awesome
+node_modules/bower/bin/bower install # install dependencies like boostrap, jquery, font awesome
 ```
 
 - Bower installs the dependencies
