@@ -51,10 +51,12 @@ gulp.task('clean', function () {
 });
 
 gulp.task('concatJs', function () {
+  // bower's highlightjs contains ALL languages. Result: 464 KB!
+  // Instead, use my customized package having 42 KB.
   return gulp.src([
       bowerFolder + 'jquery/dist/jquery.min.js', //first jquery, then bootstrap
       bowerFolder + 'bootstrap/dist/js/bootstrap.min.js',
-      bowerFolder + 'highlightjs/highlight.pack.min.js'
+      sourceFolder + 'dep/highlight.pack.min.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
     .pipe(gulp.dest(targetFolder + "js"));

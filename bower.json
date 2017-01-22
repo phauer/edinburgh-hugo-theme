@@ -3,7 +3,9 @@
   "dependencies": {
     "jquery": "^3.1.1",
     "bootstrap": "boostrap#^3.3.7",
-    "highlightjs": "^9.9.0",
+    // bower's highlightjs contains ALL languagues. Result: 464 KB!
+    // Instead, use my customized package having 42 KB.
+    //"highlightjs": "^9.9.0",
     "font-awesome": "^4.7.0"
   }
 }
