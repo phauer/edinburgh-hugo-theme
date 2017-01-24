@@ -22,9 +22,9 @@
   <meta property="article:modified_time" content="{{ .Date.Format "2006-01-02" }}" />
   <meta property="og:updated_time" content="{{ .Date.Format "2006-01-02" }}" />
   {{ with .Params.featuredImage -}}
-  <meta property="og:image" content="{{ . }}" />
+  <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}
   {{ with .Params.images -}}{{ range first 6 . -}}
-  <meta property="og:image" content="{{ . }}" />
+  <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}{{ end }}
 </head>
