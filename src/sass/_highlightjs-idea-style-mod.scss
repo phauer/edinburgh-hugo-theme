@@ -47,13 +47,13 @@ Slightly modified by Philipp Hauer
 }
 
 /* modified/added! field names not colored in yaml */
-code.yaml  .hljs-attr{
+code.language-yaml  .hljs-attr{
   color: #428bca;
   font-weight: bold;
 }
 
 /* hiding bug in yaml */
-code.yaml span.hljs-bullet {
+code.language-yaml span.hljs-bullet {
   background: #fff;
 }
 
