@@ -55,3 +55,9 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 {{ partial "cookie-consent.html" . }}
+
+{{ if not (in (printf "%v" $.Site.BaseURL) "localhost") -}}
+{{ with .Site.Params.atriptCode -}}
+  {{ . | markdownify }}
+{{- end }}
+{{- end }}
