@@ -70,46 +70,52 @@ main.eb-content {
         div.related-posts {
           $size: 185px;
           ul {
+            //use flexbox
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
             list-style: none;
             padding: 0;
             margin: 0;
-            float: left;
-            box-sizing: border-box;
             li {
-              width: $size;
+              text-align: center;
+              flex-grow: 1;
+
               height: $size;
-              @media (max-width: $eb-medium-max-width) {
-                width: #{$size / 1.1};
-                height: #{$size / 1.1};
-              }
-              @media (max-width: $eb-small-max-width) {
-                width: #{$size / 1.25};
-                height: #{$size / 1.25};
-              }
               margin: 5px;
               border: 1px solid $eb-gray-light;
               padding: 6px;
-              float: left;
               overflow: hidden;
               position: relative;
-              img {
-                width: #{$size - 15};
-                @media (max-width: $eb-medium-max-width) {
-                  width: #{($size - 15) / 1.1};
-                }
-                @media (max-width: $eb-small-max-width) {
-                  width: #{($size - 15) / 1.25};
-                }
-              }
-              p {
-                position: absolute;
+
+              display: flex;
+              align-items: center;
+              a {
                 display: block;
-                bottom: 10px;
-                background: rgba(255,255,255,0.9);
-                padding: 2px;
-                margin: 0;
-                text-align: center;
-                height: #{$size / 2.3}
+                align-self: center;
+                flex-grow: 1;
+                img {
+                  width: #{$size - 15};
+                  @media (max-width: $eb-medium-max-width) {
+                    width: #{($size - 15) / 1.1};
+                  }
+                  @media (max-width: $eb-small-max-width) {
+                    width: #{($size - 15) / 1.25};
+                  }
+                }
+                p {
+                  position: absolute;
+                  display: block;
+                  bottom: 0;
+                  background: rgba(255,255,255,0.9);
+                  padding: 2px;
+                  margin: 5px 0 0 0;
+                  text-align: center;
+                  height: #{$size / 2.8};
+                  width: 97%;
+                  font-size: 90%;
+                }
               }
             }
           }
