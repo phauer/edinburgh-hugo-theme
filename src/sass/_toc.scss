@@ -3,6 +3,9 @@ main.eb-content {
     nav#TableOfContents{
       border: 1px solid #aaa;
       width: 350px;
+      @media (max-width: $eb-xsmall-max-width) {
+        width: 100%;
+      }
       float: right;
       margin-left: 10px;
       font-size: 95%;
