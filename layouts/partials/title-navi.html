@@ -31,10 +31,10 @@
   </div>
 </header>
 
-{{ if ne (printf "%v" $.Site.BaseURL) "http://localhost:1313/" }}
+{{ if not (in (printf "%v" $.Site.BaseURL) "localhost") }}
 {{ with .Site.Params.carbonAdsCode }}
   <aside class="row eb-carbonads">
-      {{ . | markdownify }}
+    {{ . | markdownify }}
   </aside>
 {{ end }}
 {{ end }}
