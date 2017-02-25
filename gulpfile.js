@@ -10,7 +10,7 @@ var gulp = require('gulp'),
   merge = require('merge-stream');
 
 var sourceFolder = 'src/';
-var bowerFolder = 'bower_components/';
+var nodeModulesFolder = 'node_modules/';
 var targetFolder = 'static/';
 var cssTargetFolder = targetFolder + 'css/';
 
@@ -34,8 +34,8 @@ gulp.task('createCss', function () {
     .pipe(cleanCSS());
 
   var additionalCssFiles = gulp.src([
-      bowerFolder + 'bootstrap/dist/css/bootstrap.min.css',
-      bowerFolder + 'font-awesome/css/font-awesome.min.css'
+    nodeModulesFolder + 'bootstrap/dist/css/bootstrap.min.css',
+    nodeModulesFolder + 'font-awesome/css/font-awesome.min.css'
   ]);
 
   //bootstrap needs to be before edinburgh, because edinburgh overrides bootstrap's styles.
@@ -51,12 +51,12 @@ gulp.task('clean', function () {
 });
 
 gulp.task('concatJs', function () {
-  // bower's highlightjs contains ALL languages. Result: 464 KB!
+  // npm's highlightjs contains ALL languages. Result: 464 KB!
   // Instead, use my customized package having 42 KB.
   return gulp.src([
-      bowerFolder + 'jquery/dist/jquery.min.js', //first jquery, then bootstrap
-      bowerFolder + 'bootstrap/dist/js/bootstrap.min.js',
-      sourceFolder + 'dep/highlight.pack.min.js'
+    nodeModulesFolder + 'jquery/dist/jquery.min.js', //first jquery, then bootstrap
+    nodeModulesFolder + 'bootstrap/dist/js/bootstrap.min.js',
+    sourceFolder + 'dep/highlight.pack.min.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
     .pipe(gulp.dest(targetFolder + "js"));
@@ -64,8 +64,8 @@ gulp.task('concatJs', function () {
 
 gulp.task('copyFonts', function () {
   return gulp.src([
-      bowerFolder + 'bootstrap/dist/fonts/*',
-      bowerFolder + 'font-awesome/fonts/*'
+    nodeModulesFolder + 'bootstrap/dist/fonts/*',
+    nodeModulesFolder + 'font-awesome/fonts/*'
   ])
     .pipe(gulp.dest(targetFolder + "/fonts"));
 });

@@ -9,10 +9,9 @@ Install at least Hugo 0.18.1.
 Preparation:
 ```bash
 npm install
-node_modules/bower/bin/bower install # install dependencies like boostrap, jquery, font awesome
 ```
 
-- Bower installs the dependencies
+- npm installs the dependencies
 - Gulp copies and preprocesses the assets (compile sass, concat css and js, copy images and fonts). 
   - Source: `src`
   - Target: `static`
