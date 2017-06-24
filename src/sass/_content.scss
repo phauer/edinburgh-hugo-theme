@@ -24,6 +24,16 @@ main.eb-content {
         text-align: justify;
         @extend .eb-text-format;
       }
+      blockquote {
+        border-left: 5px solid $eb-blue;
+        margin: 0 0 20px 10px;
+      }
+      pre {
+        margin: 15px 0 15px 0;
+      }
+      table {
+        margin: 15px 0 15px 0;
+      }
     }
     footer {
       clear: both;
