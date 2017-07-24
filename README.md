@@ -24,7 +24,7 @@ npm install
 ```bash
 # terminal 1
 cd themes/edinburgh-hugo-theme
-gulp # create assets. watches for sass changes, but doesn't reload browser, because hugo does this for us.
+npm run watch # create assets with gulp. watches for sass changes, but doesn't reload browser, because hugo does this for us.
 
 # terminal 2
 cd ../.. # in root folder
@@ -42,7 +42,7 @@ npm install
 
 ```bash
 cd themes/edinburgh-hugo-theme
-gulp create # create assets.
+npm run build # create assets with gulp
 
 cd ../..
 hugo # create website

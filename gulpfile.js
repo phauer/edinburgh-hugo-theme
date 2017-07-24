@@ -80,11 +80,8 @@ gulp.task('copyFavicon', function () {
     .pipe(gulp.dest(targetFolder));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['build'], function () {
   gulp.watch(sourceFolder + 'sass/*.scss', ['createCss']);
 });
 
-gulp.task('create', ['createCss', 'concatJs', 'copyFonts', 'copyImages', 'copyFavicon']);
-
-gulp.task('default', ['create', 'watch'], function () {
-});
+gulp.task('build', ['createCss', 'concatJs', 'copyFonts', 'copyImages', 'copyFavicon']);
