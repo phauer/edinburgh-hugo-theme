@@ -46,15 +46,29 @@ Slightly modified by Philipp Hauer
   color: #428bca; /* modified! */
 }
 
-/* modified/added! field names not colored in yaml */
-code.language-yaml  .hljs-attr{
-  color: #428bca;
-  font-weight: bold;
+code.language-ini {
+ .hljs-attr{
+    color: #428bca;
+    font-weight: bold;
+  }
+} 
+code.language-yaml {
+  .hljs-attr{
+    color: #428bca;
+    font-weight: bold;
+  }
+  span.hljs-bullet {
+    background: #fff;
+  }
 }
-
-/* hiding bug in yaml */
-code.language-yaml span.hljs-bullet {
-  background: #fff;
+code.language-apache {
+  .hljs-section {
+    font-weight: normal;
+  }
+  .hljs-attribute {
+    color: #428bca;
+    font-weight: bold;
+  }
 }
 
 .hljs-attribute,
