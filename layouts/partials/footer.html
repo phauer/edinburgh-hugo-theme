@@ -47,7 +47,7 @@
 
 <footer class="eb-footer">
   <div class="row eb-imprint">
-    <p><a href="/page/legal/" rel="nofollow">Imprint, Contribution, Privacy Policy</a></p>
+    <p><a href="/page/legal/" rel="nofollow">Imprint, Icon Contribution, Privacy Policy</a></p>
   </div>
 </footer>
 
@@ -55,9 +55,3 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 {{ partial "cookie-consent.html" . }}
-
-{{ if not (in (printf "%v" $.Site.BaseURL) "localhost") -}}
-{{ with .Site.Params.atriptCode -}}
-  {{ . | markdownify }}
-{{- end }}
-{{- end }}
