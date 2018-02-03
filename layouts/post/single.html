@@ -15,7 +15,7 @@
 
               {{ .Summary }}
 
-              {{ if .Params.featuredImageLarge }}
+              {{ if and (.Params.featuredImageLarge) (.Params.featuredImageShowInContent) }}
               <p>
                 <img src="{{ .Params.featuredImageLarge | absURL }}" alt="{{ .Title }}" class="featuredImageLarge">
               </p>
