@@ -11,8 +11,19 @@
                 <p>Posted on {{ .Date.Format "Jan 2, 2006" }}</p>
             </header>
             <section>
-                {{ partial "toc.html" . }}
-                {{ .Content }}
+              {{ partial "toc.html" . }}
+
+              {{ .Summary }}
+
+              {{ if .Params.featuredImageLarge }}
+              <p>
+                <img src="{{ .Params.featuredImageLarge | absURL }}" alt="{{ .Title }}" class="featuredImageLarge">
+              </p>
+              {{ end }}
+
+              {{ $contentWithoutSummary := replace .Content .Summary "" }}
+              {{ $contentWithoutSummary | safeHTML }}
+
             </section>
             <footer class="eb-entry-meta">
                 {{ partial "related-posts.html" . }}
