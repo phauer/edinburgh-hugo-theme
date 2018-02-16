@@ -5,13 +5,7 @@ Slightly modified by Philipp Hauer
 */
 
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;/*modified! */
-  font-size: 110%;
-  font-weight: 500;
-  /* background: #fff; */ /*modified! */
+  /* moved code to generic code-tag in content.scss in order to apply them also for .nohighlight blocks */
 }
 
 .hljs-subst,
