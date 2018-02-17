@@ -4,8 +4,10 @@
   {{ partial "header-shared.html" . }}
   <title>{{ .Title }}</title>
   <meta property="og:title" content="{{ .Title }}" />
+  {{ if not (eq .Permalink "") -}}
   <link rel="canonical" href="{{ .Permalink }}"/>
   <meta property="og:url" content="{{ .Permalink }}" />
+  {{- end }}
   <meta property="og:type" content="article" />
   <meta property="article:author" content="{{ .Site.Params.author.name }}" />
 </head>
