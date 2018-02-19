@@ -1,19 +1,16 @@
 <div class="related-posts">
-    <p class="h3-like">Related Posts</p>
-    <ul>
-    {{ $page_link := .Permalink -}}
-    {{ $tags := .Params.tags -}}
-    {{ range $page := .Site.Pages -}}
-        {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 -}}
-        {{ if and $has_common_tags (ne $page_link $page.Permalink) (lt ($.Scratch.Get "$c") 4) -}}
-            {{ $.Scratch.Add "$c" 1 -}}
-            <li>
-                <a href="{{ $page.Permalink }}">
-                    <img src="{{ .Params.featuredImage }}" alt="{{ .Title }}"/>
-                    <p>{{ .Title }}</p>
-                </a>
-            </li>
-        {{- end }}
-    {{- end }}
-    </ul>
+  <p class="h3-like">Related Posts</p>
+  {{ $related := .Site.RegularPages.Related . | first 4 }}
+  {{ with $related }}
+  <ul>
+    {{ range . }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <img src="{{ .Params.featuredImage }}" alt="{{ .Title }}"/>
+        <p>{{ .Title }}</p>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
 </div>
