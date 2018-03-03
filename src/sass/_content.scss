@@ -61,6 +61,20 @@ main.eb-content {
       blockquote {
         font-size: 16px;
       }
+      // see edinburgh.js
+      h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+        a.heading-anchor-link {
+          display: none;
+          svg.anchor {
+            fill: currentColor;
+          }
+        }
+        &:hover {
+          a {
+            display: inline;
+          }
+        }
+      }
     }
     footer {
       clear: both;

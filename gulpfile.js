@@ -56,7 +56,8 @@ gulp.task('concatJs', function () {
   return gulp.src([
     nodeModulesFolder + 'jquery/dist/jquery.min.js', //first jquery, then bootstrap
     nodeModulesFolder + 'bootstrap/dist/js/bootstrap.min.js',
-    sourceFolder + 'dep/highlight.pack.min.js'
+    sourceFolder + 'dep/highlight.pack.min.js',
+    sourceFolder + 'js/edinburgh.js'
   ])
     .pipe(concat('mergedScripts.min.js'))
     .pipe(gulp.dest(targetFolder + "js"));
@@ -81,7 +82,7 @@ gulp.task('copyFavicon', function () {
 });
 
 gulp.task('watch', ['build'], function () {
-  gulp.watch(sourceFolder + 'sass/*.scss', ['createCss']);
+  gulp.watch([sourceFolder + 'sass/*.scss, ', sourceFolder + 'js/edinburgh.js'], ['createCss', 'concatJs']);
 });
 
 gulp.task('build', ['createCss', 'concatJs', 'copyFonts', 'copyImages', 'copyFavicon']);
