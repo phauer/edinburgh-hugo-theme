@@ -1,21 +1,14 @@
 @import "common";
 
-div.cc_banner-wrapper {
-  a.cc_btn_accept_all {
-    background-color: $eb-blue;
-    color: white;
-    &:hover {
-      background-color: rgba($eb-blue, 0.65);
-      color: white;
+.cc-window {
+  .cc-message{
+    line-height: 1.3;
+    font-size: 75%;
+    @media only screen and (min-width : 400px) {
+      font-size: 85%;
     }
-  }
-  a.cc_more_info {
-    color: $eb-blue;
-    &:hover {
-      text-decoration: underline;
+    @media only screen and (min-width : 600px) {
+      font-size: 95%;
     }
-  }
-  p.cc_message{
-    color: $eb-black;
   }
 }
