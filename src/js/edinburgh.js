@@ -20,4 +20,26 @@
   }
 
   window.onload = displayAnchorLinkNextToHeadings;
+
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#e8eaeb",
+          "text": "#4a4a4a"
+        },
+        "button": {
+          "background": "#008DC5",
+          "text": "#ffffff"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom",
+      "content": {
+        "message": "I save information about your visit on my blog and use cookies. This data is used for statistics and advertising. This way, I see what my visitors are expecting and how I can improve my blog.",
+        "dismiss": "OK",
+        "link": "Privacy Policy",
+        "href": "/page/legal/"
+      }
+    })});
 })();
