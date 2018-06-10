@@ -1,6 +1,8 @@
 @import "common";
 .eb-carbonads{
-  
+
+  height: 120px; //avoid "jumping" of the whole site when ads are loaded
+
   #carbonads {
     --width: 180px;
     --font-size: 14px;
