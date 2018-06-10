@@ -1,6 +1,6 @@
 @import "common";
 .eb-carbonads{
-  // height: 126px;
+  
   #carbonads {
     --width: 180px;
     --font-size: 14px;
@@ -66,7 +66,8 @@
     line-height: 0;
   }
   
-  @media only screen and (min-width: 320px) and (max-width: 759px) {
+  //removed: and (max-width: 759px)
+  @media only screen and (min-width: 320px) {
     #carbonads {
       float: none;
       margin: 0 auto;
@@ -91,7 +92,7 @@
       margin-bottom: 0;
       padding: 8px 20px;
       text-align: left;
-      max-width: calc(100% - 130px - 3em);
+      max-width: calc(100% - 100px - 3em);
     }
     .carbon-poweredby {
       left: 130px;
