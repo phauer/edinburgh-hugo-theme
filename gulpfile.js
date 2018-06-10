@@ -82,7 +82,7 @@ gulp.task('copyFavicon', function () {
 });
 
 gulp.task('watch', ['build'], function () {
-  gulp.watch([sourceFolder + 'sass/*.scss, ', sourceFolder + 'js/edinburgh.js'], ['createCss', 'concatJs']);
+  gulp.watch([sourceFolder + 'sass/*.scss', sourceFolder + 'js/edinburgh.js'], ['createCss', 'concatJs']);
 });
 
 gulp.task('build', ['createCss', 'concatJs', 'copyFonts', 'copyImages', 'copyFavicon']);
