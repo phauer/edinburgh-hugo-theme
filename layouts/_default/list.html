@@ -1,0 +1,16 @@
+{{ partial "header-taxonomy.html" . }}
+<body>
+
+<div class="container">
+  {{ partial "title-navi.html" . }}
+   <main class="row eb-content">
+      <h1 class="eb-taxonomy-title">{{ .Title }}</h1>
+      {{ range .Data.Pages }}
+        {{ .Render "summary" }}
+      {{end}}
+   </main>
+   {{ partial "footer.html" . }}
+</div>
+
+</body>
+</html>
