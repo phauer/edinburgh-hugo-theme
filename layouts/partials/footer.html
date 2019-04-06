@@ -18,10 +18,8 @@
   <aside class="col-md-4 eb-latest-area">
     <p class="eb-latest-title">Recent Posts</p>
     <ul>
-      {{ range first 5 .Site.Pages -}}
-      {{if eq .Type "post" -}}
-      <li>{{ .Render "link" }}</li>
-      {{- end }}
+      {{ range first 5 (where .Site.Pages "Section" "blog") }}
+        <li>{{ .Render "link" }}</li>
       {{ end }}
     </ul>
   </aside>
