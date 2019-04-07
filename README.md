@@ -2,6 +2,13 @@
 
 This is the theme for my [blog](https://phauer.com). It's the migration of my [edinburgh-wordpress-theme](https://github.com/phauer/edinburgh-wordpress-theme) to the static website engine [Hugo](https://gohugo.io/).
 
+# UPDATE April 2019
+
+**I don't maintain this theme anymore. Background:**
+
+- I now deploy my blog via Netlify. Hence, it's more convenient to locate the theme in the same git repo as the hugo project.
+- Hugo introduced [Pipes](https://gohugo.io/hugo-pipes/) which can be used to comile SASS and to minify and concat CSS & JS. So there is no need for a second (gulp) build for the theme anymore. This significantly simplifies the tool chain required to build the blog and the theme.
+
 # Development
 
 Install at least Hugo 0.18.1.
